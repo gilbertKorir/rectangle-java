@@ -4,6 +4,7 @@ public class Rectangle {
     private int mLength;
     private int mWidth;
     private static List<Rectangle> instances = new ArrayList<Rectangle>();
+    private boolean shape;
 
     public Rectangle(int length, int width) {
         mLength = length;
@@ -17,14 +18,18 @@ public class Rectangle {
     public int getWidth(){
         return mWidth;
     }
-    public boolean isSquare(){
+    public boolean isSquare() {
         return  mLength == mWidth;
     }
-    public int area(){
+    public int area() {
         return mLength * mWidth;
     }
-    public static List<Rectangle>all(){
+    public static List<Rectangle> getAll(){
         return  instances;
+    }
+
+    public boolean getShape(){
+        return shape;
     }
 
 }
